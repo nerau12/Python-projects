@@ -1,10 +1,10 @@
+#import random library
+from random import randrange
 
 def guessNumber():
-    #import random library
-    import random
 
     #generate a random from 1 to 10
-    number = int(random.randrange(1,10))
+    number = int(randrange(1,10))
 
     #get user input
     print("Program has user guess a number that is generated randomly from 1 to 10")

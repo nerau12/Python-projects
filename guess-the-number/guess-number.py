@@ -3,19 +3,22 @@ def guessNumber():
     #import random library
     import random
 
-    #generate a random from 20 to 50 in step 1
-    number = int(random.randrange(1,4))
+    #generate a random from 1 to 10
+    number = int(random.randrange(1,10))
+
     #get user input
-    print("Program has user guess a number that is generated randomly")
+    print("Program has user guess a number that is generated randomly from 1 to 10")
     guess = int(input("Enter another guess: "))
 
     while guess != number:
-
+        
+        #tell user if guess is too high or low
         if guess < number:
             print("Guess is too low")
         elif guess > number:
             print("Guess is too high")
 
+        #get user input on wrong guess
         guess = int(input("Enter another guess: "))
 
     if guess == number:

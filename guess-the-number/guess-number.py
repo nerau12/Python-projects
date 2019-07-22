@@ -2,7 +2,6 @@
 from random import randrange
 
 def guessNumber():
-
     #generate a random from 1 to 10
     number = int(randrange(1,10))
 

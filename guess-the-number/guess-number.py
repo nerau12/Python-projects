@@ -23,4 +23,5 @@ def guessNumber():
     if guess == number:
         print("You guessed the right number")
 
-guessNumber()
+if __name__ == '__main__':
+    guessNumber()

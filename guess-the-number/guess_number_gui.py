@@ -1,5 +1,5 @@
 import tkinter as tinker
-from guess_number import guessNumber
+from guess_number import guess_number
 
 class GuessNumber:
     

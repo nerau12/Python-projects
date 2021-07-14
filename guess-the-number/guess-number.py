@@ -7,7 +7,7 @@ def guessNumber():
 
     #get user input
     print("Program has user guess a number that is generated randomly from 1 to 10")
-    guess = int(input("Enter another guess: "))
+    guess = int(input("Please enter a guess: "))
 
     while guess != number:
         
@@ -20,8 +20,9 @@ def guessNumber():
         #get user input on wrong guess
         guess = int(input("Enter another guess: "))
 
-    if guess == number:
-        print("You guessed the right number")
+
+    print("You guessed the right number")
+
 
 if __name__ == '__main__':
     guessNumber()

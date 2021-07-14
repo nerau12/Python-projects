@@ -1,7 +1,7 @@
 #import random library
 from random import randrange
 
-def guessNumber():
+def guess_number():
     #generate a random from 1 to 10
     number = int(randrange(1,10))
 
@@ -25,4 +25,4 @@ def guessNumber():
 
 
 if __name__ == '__main__':
-    guessNumber()
+    guess_number()

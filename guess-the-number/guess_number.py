@@ -1,7 +1,7 @@
 #import random library
 from random import randrange
 
-class GuessNumber:
+class Guess_Number:
 
     def __init__(self):
         #generate a random from 1 to 10
@@ -44,5 +44,5 @@ class GuessNumber:
 
 
 if __name__ == '__main__':
-    guess_number = GuessNumber()
+    guess_number = Guess_Number()
     guess_number.guess_number()

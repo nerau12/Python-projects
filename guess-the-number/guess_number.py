@@ -1,5 +1,6 @@
 #import random library
 from random import randrange
+import sys
 
 class Guess_Number:
 
@@ -19,9 +20,9 @@ class Guess_Number:
         
             #tell user if guess is too high or low
             if self.guess < self.number:
-                print("Guess is too low")
+                print("Guess of "+ str(self.guess) +" is too low")
             elif self.guess > self.number:
-                print("Guess is too high")
+                print("Guess of "+ str(self.guess) +" is too high")
             
             #tell user how many guesses left
             print('You have ' + str(self.max_num_of_guess - self.num_of_guesses) + ' left')
@@ -36,8 +37,8 @@ class Guess_Number:
         try:
             self.guess = int(input("Please enter a guess: "))
             self.num_of_guesses += 1
-        except ValueError:
-            print('Not a number')
+        except ValueError as e:
+            print("I don't understand your guess of " + str(e).split("'")[1])
             return self.get_number()
     
     #prints results

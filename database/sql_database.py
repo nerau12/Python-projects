@@ -1,15 +1,16 @@
-import MySQLdb as mdb
+import sqlite3
 
-class Database:
+class Sql_Database:
     
-    def __init__(self):
-        self.name = None
-        self.conn = self.connect(db_name)
-        self.cursor = self.conn.cursor()
+    def __init__(self, name):
+        self._conn = sqlite3.connect(name)
+        self._cursor = self._conn.cursor()
 
-    def connect(self):
-        pass
+    def close(self):
+        self._conn.close()
+    
+    def create_table(self):
+        self._conn.execute()
 
-    def __del__(self):
-        self.cursor.close()
-        self.conn.close()
+    def commit(self):
+        self._conn.commit()

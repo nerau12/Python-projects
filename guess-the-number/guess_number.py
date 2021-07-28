@@ -38,7 +38,7 @@ class Guess_Number:
 
         except ValueError as error:
             print("I don't understand your guess of " + str(error).split("'")[1])
-            return self.get_number()
+            return self.get_guess()
     
     #prints results
     def print_results(self):

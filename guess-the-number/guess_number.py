@@ -1,11 +1,9 @@
 #import random library
 from random import randrange
-import sys
 
 class Guess_Number:
 
     def __init__(self):
-        #generate a random from 1 to 10
         self.number = int(randrange(1,100))
         self.guess = 0
         self.num_of_guesses = 0
@@ -14,7 +12,7 @@ class Guess_Number:
     #plays game
     def guess_number(self):
         print("Program has user guess a number that is generated randomly from 1 to 100\n You have 5 guesses")
-        self.get_number()
+        self.guess = self.get_guess()
 
         while (self.guess != self.number) and (self.num_of_guesses != self.max_num_of_guess):
         
@@ -28,21 +26,23 @@ class Guess_Number:
             print('You have ' + str(self.max_num_of_guess - self.num_of_guesses) + ' left')
 
             #get user input on wrong guess
-            self.get_number()
+            self.guess = self.get_guess()
         
-        self.results()
+        self.print_results()
 
     #gets guesses from user
-    def get_number(self):
+    def get_guess(self):
         try:
-            self.guess = int(input("Please enter a guess: "))
+            number = int(input("Please enter a guess: "))
             self.num_of_guesses += 1
-        except ValueError as e:
-            print("I don't understand your guess of " + str(e).split("'")[1])
+            return number
+
+        except ValueError as error:
+            print("I don't understand your guess of " + str(error).split("'")[1])
             return self.get_number()
     
     #prints results
-    def results(self):
+    def print_results(self):
         if self.guess == self.number:
             print("You guessed the right number")
         else:

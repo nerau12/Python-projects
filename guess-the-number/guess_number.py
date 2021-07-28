@@ -12,7 +12,7 @@ class Guess_Number:
     #plays game
     def guess_number(self):
         print("Program has user guess a number that is generated randomly from 1 to 100\n You have 5 guesses")
-        self.guess = self.get_guess()
+        self.get_guess()
 
         while (self.guess != self.number) and (self.num_of_guesses != self.max_num_of_guess):
         
@@ -26,16 +26,15 @@ class Guess_Number:
             print('You have ' + str(self.max_num_of_guess - self.num_of_guesses) + ' left')
 
             #get user input on wrong guess
-            self.guess = self.get_guess()
+            self.get_guess()
         
         self.print_results()
 
     #gets guesses from user
     def get_guess(self):
         try:
-            number = int(input("Please enter a guess: "))
+            self.guess = int(input("Please enter a guess: "))
             self.num_of_guesses += 1
-            return number
 
         except ValueError as error:
             print("I don't understand your guess of " + str(error).split("'")[1])

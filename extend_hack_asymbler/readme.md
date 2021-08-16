@@ -1,4 +1,4 @@
-Extended Hack Assembler
+#Extended Hack Assembler
 
 Usage python extendedhackassembler.py program.asm or program.xasm
 
